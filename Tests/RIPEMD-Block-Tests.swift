@@ -63,7 +63,8 @@ class RIPEMD_Block_Tests: XCTestCase {
         /* Padding rules according to: https://github.com/agoebel/RIPEMD-160
         Start with 0x80 followed by zeros, followed by the 64-bit length of the string in BITS (bits = 8 times number of bytes) in little-endian form. */
         
-        let message: [UInt32] = [0x00_00_00_80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        let message: [UInt32] = [UInt32(bigEndian: 0x80_00_00_00),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                                // 0x80 is in little endian
         
         var digester = RIPEMD.Block()
         digester.compress(message)
@@ -76,15 +77,11 @@ class RIPEMD_Block_Tests: XCTestCase {
         
         // "" -> 9c1185a5 c5e9fc54 61280897 7ee8f548 b2258d31
         
-        // In little endian byte order this becomes:
-        //       a585119c 54fce9c5 97082861 48f5e87e 318d25b2
-        
-        
-        let check0: Bool = h0 == 0xa585119c // 9c1185a5
-        let check1: Bool = h1 == 0x54fce9c5 // c5e9fc54
-        let check2: Bool = h2 == 0x97082861 // 61280897
-        let check3: Bool = h3 == 0x48f5e87e // 7ee8f548
-        let check4: Bool = h4 == 0x318d25b2 // b2258d31
+        let check0: Bool = h0 == UInt32(bigEndian: 0x9c1185a5) // 0x9c1185a5 is in little endian
+        let check1: Bool = h1 == UInt32(bigEndian: 0xc5e9fc54)
+        let check2: Bool = h2 == UInt32(bigEndian: 0x61280897)
+        let check3: Bool = h3 == UInt32(bigEndian: 0x7ee8f548)
+        let check4: Bool = h4 == UInt32(bigEndian: 0xb2258d31)
         
         
         // Test will crash if you use more than two XTAssertTrue statements.
