@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A227491C196C468C006A4050 /* RIPEMD+Bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491B196C468C006A4050 /* RIPEMD+Bitwise.swift */; };
+		A227491E196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491D196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift */; };
 		A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */; };
 		A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMDmac.framework */; };
 		A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D143196C0D0A0016E897 /* RIPEMD.swift */; };
+		A2A93B10196C48C1001D5247 /* HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B0F196C48C1001D5247 /* HexString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A227491B196C468C006A4050 /* RIPEMD+Bitwise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD+Bitwise.swift"; path = "Classes/RIPEMD+Bitwise.swift"; sourceTree = SOURCE_ROOT; };
+		A227491D196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Bitwise-Tests.swift"; path = "Tests/RIPEMD-Bitwise-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Tests.swift"; path = "Tests/RIPEMD-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A277D116196C0A070016E897 /* RIPEMDmac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMDmac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D11A196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Mac/Info.plist"; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		A277D127196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/MacTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A277D143196C0D0A0016E897 /* RIPEMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RIPEMD.swift; path = Classes/RIPEMD.swift; sourceTree = SOURCE_ROOT; };
 		A277D146196C0DDE0016E897 /* RIPEMDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RIPEMDmac.h; path = "Supporting Files/Mac/RIPEMDmac.h"; sourceTree = "<group>"; };
+		A2A93B0F196C48C1001D5247 /* HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexString.swift; path = Classes/HexString.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				A277D143196C0D0A0016E897 /* RIPEMD.swift */,
+				A227491B196C468C006A4050 /* RIPEMD+Bitwise.swift */,
+				A2A93B0F196C48C1001D5247 /* HexString.swift */,
 			);
 			name = Classes;
 			path = RIPENDmac;
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */,
+				A227491D196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift */,
 			);
 			name = Tests;
 			path = RIPENDmacTests;
@@ -246,6 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A93B10196C48C1001D5247 /* HexString.swift in Sources */,
+				A227491C196C468C006A4050 /* RIPEMD+Bitwise.swift in Sources */,
 				A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A227491E196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift in Sources */,
 				A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
