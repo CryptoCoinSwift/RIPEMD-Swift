@@ -11,6 +11,13 @@ extension RIPEMD {
     struct Block {
         let message: [UInt32]
         
+        // Initial values
+        let h₀ = 0x67452301
+        let h₁ = 0xEFCDAB89
+        let h₂ = 0x98BADCFE
+        let h₃ = 0x10325476
+        let h₄ = 0xC3D2E1F0
+        
         init(_ message: [UInt32]) {
             assert(countElements(message) == 16, "Wrong message size")
             self.message = message
@@ -36,7 +43,6 @@ extension RIPEMD {
                 return {(_, _, _) in 0 }
             }
         }
-        
         
         enum K {
             case Left, Right
