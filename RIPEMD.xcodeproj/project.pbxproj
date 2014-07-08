@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A227491C196C468C006A4050 /* UInt32+CircularShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491B196C468C006A4050 /* UInt32+CircularShift.swift */; };
-		A227491E196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491D196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift */; };
+		A227491E196C46AF006A4050 /* UInt32+CircularShift-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */; };
 		A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */; };
 		A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMDmac.framework */; };
 		A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D143196C0D0A0016E897 /* RIPEMD.swift */; };
@@ -50,7 +50,7 @@
 
 /* Begin PBXFileReference section */
 		A227491B196C468C006A4050 /* UInt32+CircularShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UInt32+CircularShift.swift"; path = "Classes/UInt32+CircularShift.swift"; sourceTree = SOURCE_ROOT; };
-		A227491D196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Bitwise-Tests.swift"; path = "Tests/RIPEMD-Bitwise-Tests.swift"; sourceTree = SOURCE_ROOT; };
+		A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UInt32+CircularShift-Tests.swift"; path = "Tests/UInt32+CircularShift-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Tests.swift"; path = "Tests/RIPEMD-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A277D116196C0A070016E897 /* RIPEMDmac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMDmac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D11A196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Mac/Info.plist"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */,
-				A227491D196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift */,
+				A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */,
 				A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */,
 			);
 			name = Tests;
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A93B14196C4B05001D5247 /* RIPEMD-Block-Tests.swift in Sources */,
-				A227491E196C46AF006A4050 /* RIPEMD-Bitwise-Tests.swift in Sources */,
+				A227491E196C46AF006A4050 /* UInt32+CircularShift-Tests.swift in Sources */,
 				A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
