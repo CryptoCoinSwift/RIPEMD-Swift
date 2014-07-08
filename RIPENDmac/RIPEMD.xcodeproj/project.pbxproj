@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A277D11C196C0A070016E897 /* RIPENDmac.h in Headers */ = {isa = PBXBuildFile; fileRef = A277D11B196C0A070016E897 /* RIPENDmac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A277D11C196C0A070016E897 /* RIPEMDmac.h in Headers */ = {isa = PBXBuildFile; fileRef = A277D11B196C0A070016E897 /* RIPEMDmac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMDmac.framework */; };
-		A277D129196C0A070016E897 /* RIPENDmacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D128196C0A070016E897 /* RIPENDmacTests.swift */; };
+		A277D129196C0A070016E897 /* RIPEMDmacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D128196C0A070016E897 /* RIPEMDmacTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +27,29 @@
 			remoteGlobalIDString = A277D115196C0A070016E897;
 			remoteInfo = RIPEMDmac;
 		};
+		A277D134196C0A1E0016E897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A277D10D196C0A070016E897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A277D115196C0A070016E897;
+			remoteInfo = RIPEMDmac;
+		};
+		A277D136196C0A9F0016E897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A277D10D196C0A070016E897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A277D115196C0A070016E897;
+			remoteInfo = RIPEMDmac;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A277D116196C0A070016E897 /* RIPEMDmac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMDmac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D11A196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A277D11B196C0A070016E897 /* RIPENDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIPENDmac.h; sourceTree = "<group>"; };
+		A277D11B196C0A070016E897 /* RIPEMDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIPEMDmac.h; sourceTree = "<group>"; };
 		A277D121196C0A070016E897 /* RIPEMDmacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIPEMDmacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D127196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A277D128196C0A070016E897 /* RIPENDmacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPENDmacTests.swift; sourceTree = "<group>"; };
+		A277D128196C0A070016E897 /* RIPEMDmacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMDmacTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +74,8 @@
 		A277D10C196C0A070016E897 = {
 			isa = PBXGroup;
 			children = (
-				A277D118196C0A070016E897 /* RIPENDmac */,
+				A277D119196C0A070016E897 /* Supporting Files */,
+				A277D118196C0A070016E897 /* Classes */,
 				A277D125196C0A070016E897 /* RIPENDmacTests */,
 				A277D117196C0A070016E897 /* Products */,
 			);
@@ -75,27 +90,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A277D118196C0A070016E897 /* RIPENDmac */ = {
+		A277D118196C0A070016E897 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A277D11B196C0A070016E897 /* RIPENDmac.h */,
-				A277D119196C0A070016E897 /* Supporting Files */,
 			);
+			name = Classes;
 			path = RIPENDmac;
 			sourceTree = "<group>";
 		};
 		A277D119196C0A070016E897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A277D11B196C0A070016E897 /* RIPEMDmac.h */,
 				A277D11A196C0A070016E897 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = RIPENDmac;
 			sourceTree = "<group>";
 		};
 		A277D125196C0A070016E897 /* RIPENDmacTests */ = {
 			isa = PBXGroup;
 			children = (
-				A277D128196C0A070016E897 /* RIPENDmacTests.swift */,
+				A277D128196C0A070016E897 /* RIPEMDmacTests.swift */,
 				A277D126196C0A070016E897 /* Supporting Files */,
 			);
 			path = RIPENDmacTests;
@@ -116,7 +132,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277D11C196C0A070016E897 /* RIPENDmac.h in Headers */,
+				A277D11C196C0A070016E897 /* RIPEMDmac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +170,8 @@
 			dependencies = (
 				A277D124196C0A070016E897 /* PBXTargetDependency */,
 				A277D133196C0A1E0016E897 /* PBXTargetDependency */,
+				A277D135196C0A1E0016E897 /* PBXTargetDependency */,
+				A277D137196C0A9F0016E897 /* PBXTargetDependency */,
 			);
 			name = RIPEMDmacTests;
 			productName = RIPENDmacTests;
@@ -178,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A277D110196C0A070016E897 /* Build configuration list for PBXProject "RIPEMDmac" */;
+			buildConfigurationList = A277D110196C0A070016E897 /* Build configuration list for PBXProject "RIPEMD" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -225,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277D129196C0A070016E897 /* RIPENDmacTests.swift in Sources */,
+				A277D129196C0A070016E897 /* RIPEMDmacTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +259,16 @@
 			isa = PBXTargetDependency;
 			target = A277D115196C0A070016E897 /* RIPEMDmac */;
 			targetProxy = A277D132196C0A1E0016E897 /* PBXContainerItemProxy */;
+		};
+		A277D135196C0A1E0016E897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A277D115196C0A070016E897 /* RIPEMDmac */;
+			targetProxy = A277D134196C0A1E0016E897 /* PBXContainerItemProxy */;
+		};
+		A277D137196C0A9F0016E897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A277D115196C0A070016E897 /* RIPEMDmac */;
+			targetProxy = A277D136196C0A9F0016E897 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,7 +423,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A277D110196C0A070016E897 /* Build configuration list for PBXProject "RIPEMDmac" */ = {
+		A277D110196C0A070016E897 /* Build configuration list for PBXProject "RIPEMD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A277D12A196C0A070016E897 /* Debug */,

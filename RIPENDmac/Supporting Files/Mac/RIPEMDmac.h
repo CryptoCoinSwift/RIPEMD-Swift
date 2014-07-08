@@ -1,9 +1,8 @@
 //
-//  RIPENDmac.h
-//  RIPENDmac
+//  RIPEMDmac.h
+//  RIPEMDmac
 //
 //  Created by Sjors Provoost on 08-07-14.
-//  Copyright (c) 2014 Crypto Coin Swift. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
