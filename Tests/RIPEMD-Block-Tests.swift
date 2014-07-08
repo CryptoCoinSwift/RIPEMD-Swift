@@ -34,7 +34,7 @@ class RIPEMD_Block_Tests: XCTestCase {
         
         let xORxOR: UInt32 =  0b1111_0000_0000_1111
         
-        let function = RIPEMD.Block.f(12)
+        let function = RIPEMD.Block().f(12)
         let result = function(x,y,z)
         
         XCTAssertEqual(result, xORxOR, "")
@@ -43,8 +43,8 @@ class RIPEMD_Block_Tests: XCTestCase {
     func testWordSelection() {
         let message: [UInt32] = [0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0]
         
-        let r17l = RIPEMD.Block(message).r(17, .Left)
-        let r63r = RIPEMD.Block(message).r(63, .Right)
+        let r17l = message[RIPEMD.Block.r.Left[17]]
+        let r63r = message[RIPEMD.Block.r.Right[63]]
 
         
         XCTAssertEqual(r63r, 2, "")
@@ -57,4 +57,40 @@ class RIPEMD_Block_Tests: XCTestCase {
         XCTAssertEqual(s17r, 13, "")
     }
     
+    func testZero() {
+        // One of the test vectors  is an empty string. Should result in the same hash as 1 iteration.
+        
+        /* Padding rules according to: https://github.com/agoebel/RIPEMD-160
+        Start with 0x80 followed by zeros, followed by the 64-bit length of the string in BITS (bits = 8 times number of bytes) in little-endian form. */
+        
+        let message: [UInt32] = [0x80_00_00_00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        
+        var digester = RIPEMD.Block()
+        digester.compress(message)
+        
+        let h0: UInt32 = digester.hash[0]
+        let h1: UInt32 = digester.hash[1]
+        let h2: UInt32 = digester.hash[2]
+        let h3: UInt32 = digester.hash[3]
+        let h4: UInt32 = digester.hash[4]
+        
+        // "" -> 9c1185a5 c5e9fc54 61280897 7ee8f548 b2258d31
+        let check0: Bool = h0 == 0x9c1185a5
+        let check1: Bool = h1 == 0xc5e9fc54
+        let check2: Bool = h2 == 0x61280897
+        let check3: Bool = h3 == 0x7ee8f548
+        let check4: Bool = h4 == 0xb2258d31
+        
+        println(check0)
+        println(check1)
+        println(check2)
+        println(check3)
+        println(check4)
+        
+        // Test will crash if you use more than two XTAssertTrue statements.
+        // Either that or it had something to do with UInt32 values larger than 2^31
+        
+        XCTAssertTrue(check0 && check1 && check2 && check3 && check4, "")
+
+    }
 }

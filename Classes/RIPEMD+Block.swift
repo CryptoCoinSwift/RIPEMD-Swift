@@ -9,21 +9,72 @@ import Foundation
 
 extension RIPEMD {
     struct Block {
-        let message: [UInt32]
+        init() {}
+        
+        var message: [UInt32] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         
         // Initial values
-        let h₀ = 0x67452301
-        let h₁ = 0xEFCDAB89
-        let h₂ = 0x98BADCFE
-        let h₃ = 0x10325476
-        let h₄ = 0xC3D2E1F0
+        var h₀: UInt32 = 0x67452301
+        var h₁: UInt32 = 0xEFCDAB89
+        var h₂: UInt32 = 0x98BADCFE
+        var h₃: UInt32 = 0x10325476
+        var h₄: UInt32 = 0xC3D2E1F0
         
-        init(_ message: [UInt32]) {
-            assert(countElements(message) == 16, "Wrong message size")
-            self.message = message
+        var hash: [UInt32] {
+            return [h₀, h₁, h₂, h₃, h₄]
         }
         
-        static func f (j: Int) -> ((UInt32, UInt32, UInt32) -> UInt32) {
+        
+        mutating func compress (message: [UInt32]) -> () {
+            assert(countElements(message) == 16, "Wrong message size")
+            
+            var Aᴸ = h₀
+            var Bᴸ = h₁
+            var Cᴸ = h₂
+            var Dᴸ = h₃
+            var Eᴸ = h₄
+            
+            var Aᴿ = h₀
+            var Bᴿ = h₁
+            var Cᴿ = h₂
+            var Dᴿ = h₃
+            var Eᴿ = h₄
+            
+            for j in 0...79 {
+                // Left side
+                let wordᴸ = message[r.Left[j]]
+                let functionᴸ = f(j)
+                
+                let Tᴸ: UInt32 = ((Aᴸ &+ functionᴸ(Bᴸ,Cᴸ,Dᴸ) &+ wordᴸ &+ K.Left[j]) ~<< s.Left[j]) &+ Eᴸ
+                
+                Aᴸ = Eᴸ
+                Eᴸ = Dᴸ
+                Dᴸ = Cᴸ ~<< 10
+                Cᴸ = Bᴸ
+                Bᴸ = Tᴸ
+                
+                // Right side
+                let wordᴿ = message[r.Right[j]]
+                let functionᴿ = f(79 - j)
+                
+                let Tᴿ: UInt32 = ((Aᴿ &+ functionᴿ(Bᴿ,Cᴿ,Dᴿ) &+ wordᴿ &+ K.Right[j]) ~<< s.Right[j]) &+ Eᴿ
+                
+                Aᴿ = Eᴿ
+                Eᴿ = Dᴿ
+                Dᴿ = Cᴿ ~<< 10
+                Cᴿ = Bᴿ
+                Bᴿ = Tᴿ
+            }
+            
+            let T = h₁ &+ Cᴸ &+ Dᴿ
+            h₁ = h₂ &+ Dᴸ &+ Eᴿ
+            h₂ = h₃ &+ Eᴸ &+ Aᴸ
+            h₃ = h₄ &+ Aᴸ &+ Bᴿ
+            h₄ = h₀ &+ Bᴸ &+ Cᴿ
+            h₀ = T
+        }
+        
+        func f (j: Int) -> ((UInt32, UInt32, UInt32) -> UInt32) {
             switch j {
             case let index where j < 0:
                 assert("Invalid j")
@@ -68,13 +119,8 @@ extension RIPEMD {
                     }
             }
         }
-
         
-        func r (j: Int, _  side: MessageIndex) -> UInt32 {
-            return message[side[j]]
-        }
-        
-        enum MessageIndex {
+        enum r {
             case Left, Right
             
             subscript (j: Int) -> Int {
@@ -90,9 +136,9 @@ extension RIPEMD {
                     }
                 case let index where j <= 31:
                     if self == .Left {
-                        return [7,4,13,1,10,6,15,3,12,0,9,5,2,14,11,8][index - 16]
+                        return [ 7, 4,13, 1,10, 6,15, 3,12, 0, 9, 5, 2,14,11, 8][index - 16]
                     } else {
-                        return [11,3,7,0,13,5,10,14,15,8,12,4,9,1,2][index - 16]
+                        return [ 6,11, 3, 7, 0,13, 5,10,14,15, 8,12, 4, 9, 1, 2][index - 16]
                     }
                 case let index where j <= 47:
                     if self == .Left {
