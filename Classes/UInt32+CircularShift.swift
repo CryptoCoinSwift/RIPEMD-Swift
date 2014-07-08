@@ -1,5 +1,5 @@
 //
-//  RIPEMD+Bitwise.swift
+//  RIPEMD+CircularShift.swift
 //  RIPEMD
 //
 //  Created by Sjors Provoost on 08-07-14.
@@ -11,8 +11,4 @@ operator infix ~<< { precedence 160 associativity none }
 
 func ~<< (lhs: UInt32, rhs: Int) -> UInt32 {
     return (lhs << UInt32(rhs)) | (lhs >> UInt32(32 - rhs));
-}
-
-extension RIPEMD {
-    
 }
