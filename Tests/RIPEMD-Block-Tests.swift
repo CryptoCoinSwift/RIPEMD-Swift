@@ -24,7 +24,7 @@ class RIPEMD_Block_Tests: XCTestCase {
 
     func testAddedConstants() {
         let k40:UInt32 = 0x6ED9EBA1
-        XCTAssertEqual(RIPEMD.K.Left[40], k40, "");
+        XCTAssertEqual(RIPEMD.Block.K.Left[40], k40, "");
     }
     
     func testBitlevelFunctions() {
@@ -34,7 +34,7 @@ class RIPEMD_Block_Tests: XCTestCase {
         
         let xORxOR: UInt32 =  0b1111_0000_0000_1111
         
-        let function = RIPEMD.f(12)
+        let function = RIPEMD.Block.f(12)
         let result = function(x,y,z)
         
         XCTAssertEqual(result, xORxOR, "")
