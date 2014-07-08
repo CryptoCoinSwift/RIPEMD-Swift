@@ -93,4 +93,10 @@ class RIPEMD_Block_Tests: XCTestCase {
         XCTAssertTrue(check0 && check1 && check2 && check3 && check4, "")
 
     }
+    
+    func testA() {
+        // "a" is another test vector. This allows to test thorny issues like padding rules,
+        // conversion from ASCII to bytes and endianess.
+    }
+
 }

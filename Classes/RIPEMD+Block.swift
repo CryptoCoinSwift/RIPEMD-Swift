@@ -88,7 +88,7 @@ extension RIPEMD {
             case let index where j <= 63:
                 return {(x, y, z) in  (x & z) | (y & ~z) }
             case let index where j <= 79:
-                return {(x, y, z) in  x | (y | ~z) }
+                return {(x, y, z) in  x ^ (y | ~z) }
             default:
                 assert("Invalid j")
                 return {(_, _, _) in 0 }
