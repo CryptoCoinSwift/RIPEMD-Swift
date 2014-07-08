@@ -90,7 +90,7 @@ struct RIPEMD {
             default:
                 assert("Invalid j")
                 return 0
-                }
+            }
         }
     }
     

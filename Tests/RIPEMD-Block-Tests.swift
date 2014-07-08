@@ -27,7 +27,7 @@ class RIPEMD_Block_Tests: XCTestCase {
         XCTAssertEqual(RIPEMD.K.Left[40], k40, "");
     }
     
-    func testBitlevelFunctions() {        
+    func testBitlevelFunctions() {
         let x: UInt32 =       0b0000_0000_0000_1111
         let y: UInt32 =       0b1111_1111_1111_0000
         let z: UInt32 =       0b0000_1111_1111_0000
@@ -38,6 +38,17 @@ class RIPEMD_Block_Tests: XCTestCase {
         let result = function(x,y,z)
         
         XCTAssertEqual(result, xORxOR, "")
+    }
+    
+    func testWordSelection() {
+        let message: [UInt32] = [0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0]
+        
+        let r17l = RIPEMD.Block(message).r(17, .Left)
+        let r63r = RIPEMD.Block(message).r(63, .Right)
+
+        
+        XCTAssertEqual(r63r, 2, "")
+
     }
     
 }

@@ -105,9 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				A277D143196C0D0A0016E897 /* RIPEMD.swift */,
+				A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */,
 				A227491B196C468C006A4050 /* UInt32+CircularShift.swift */,
 				A2A93B0F196C48C1001D5247 /* HexString.swift */,
-				A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */,
 			);
 			name = Classes;
 			path = RIPENDmac;
