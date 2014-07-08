@@ -68,7 +68,7 @@ extension RIPEMD {
             
             let T = h₁ &+ Cᴸ &+ Dᴿ
             h₁ = h₂ &+ Dᴸ &+ Eᴿ
-            h₂ = h₃ &+ Eᴸ &+ Aᴸ
+            h₂ = h₃ &+ Eᴸ &+ Aᴿ
             h₃ = h₄ &+ Aᴸ &+ Bᴿ
             h₄ = h₀ &+ Bᴸ &+ Cᴿ
             h₀ = T
