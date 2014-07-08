@@ -95,13 +95,37 @@ class RIPEMD_Block_Tests: XCTestCase {
         // "a" is another test vector. This allows to test thorny issues like padding rules,
         // conversion from ASCII to bytes and endianess.
         
-        XCTAssertTrue(false, "Not implemented")
+        let a: UInt32 = UInt32(bigEndian: 0x61_00_00_00)
         
-//        println("0: \( check0 ) " + NSString(format:"%2x", h0) + " ")
-//        println("1: \( check1 ) " + NSString(format:"%2x", h1) + " ")
-//        println("2: \( check2 ) " + NSString(format:"%2x", h2) + " ")
-//        println("3: \( check3 ) " + NSString(format:"%2x", h3) + " ")
-//        println("4: \( check4 ) " + NSString(format:"%2x", h4) + " ")
+        // Message gets padded with 0x80 and zeros. The last 8 bytes
+        // store, in little endian, the length of the message in bits.
+        
+        let message: [UInt32] = [UInt32(bigEndian: 0x61_80_00_00),0,0,0,0,0,0,0,0,0,0,0,0,0,UInt32(bigEndian: 0x08_00_00_00),UInt32(bigEndian: 0x00_00_00_00)]
+        
+        var digester = RIPEMD.Block()
+        digester.compress(message)
+        
+        let h0: UInt32 = digester.hash[0]
+        let h1: UInt32 = digester.hash[1]
+        let h2: UInt32 = digester.hash[2]
+        let h3: UInt32 = digester.hash[3]
+        let h4: UInt32 = digester.hash[4]
+        
+        // "a" -> 0bdc9d2d 256b3ee9 daae347b e6f4dc83 5a467ffe
+        
+        let check0: Bool = h0 == UInt32(bigEndian: 0x0bdc9d2d)
+        let check1: Bool = h1 == UInt32(bigEndian: 0x256b3ee9)
+        let check2: Bool = h2 == UInt32(bigEndian: 0xdaae347b)
+        let check3: Bool = h3 == UInt32(bigEndian: 0xe6f4dc83)
+        let check4: Bool = h4 == UInt32(bigEndian: 0x5a467ffe)
+        
+        XCTAssertTrue(check0 && check1 && check2 && check3 && check4, "")
+        
+        println("0: \( check0 ) " + NSString(format:"%2x", h0))
+        println("1: \( check1 ) " + NSString(format:"%2x", h1))
+        println("2: \( check2 ) " + NSString(format:"%2x", h2))
+        println("3: \( check3 ) " + NSString(format:"%2x", h3))
+        println("4: \( check4 ) " + NSString(format:"%2x", h4))
     }
 
 }
