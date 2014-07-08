@@ -100,4 +100,15 @@ class RIPENDmacTests: XCTestCase {
         XCTAssertEqual(RIPEMD.hexStringDigest(message), hash, "")
 
     }
+    
+    // Bitwise functions
+    func testCyclicLeftShift() {
+        let a:    UInt32 = 0b00111000001001101011100000010110
+        let σ₁a:  UInt32 = 0b01110000010011010111000000101100
+        let σ₁₀a: UInt32 = 0b10011010111000000101100011100000
+
+        XCTAssertEqual(a ~<<  1, σ₁a,  "")
+        XCTAssertEqual(a ~<< 10, σ₁₀a, "")
+    }
+    
 }
