@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A277D11C196C0A070016E897 /* RIPEMDmac.h in Headers */ = {isa = PBXBuildFile; fileRef = A277D11B196C0A070016E897 /* RIPEMDmac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */; };
 		A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMDmac.framework */; };
-		A277D129196C0A070016E897 /* RIPEMDmacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D128196C0A070016E897 /* RIPEMDmacTests.swift */; };
+		A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D143196C0D0A0016E897 /* RIPEMD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Tests.swift"; path = "Tests/RIPEMD-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A277D116196C0A070016E897 /* RIPEMDmac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMDmac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A277D11A196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A277D11B196C0A070016E897 /* RIPEMDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIPEMDmac.h; sourceTree = "<group>"; };
+		A277D11A196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Mac/Info.plist"; sourceTree = "<group>"; };
 		A277D121196C0A070016E897 /* RIPEMDmacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIPEMDmacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A277D127196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A277D128196C0A070016E897 /* RIPEMDmacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMDmacTests.swift; sourceTree = "<group>"; };
+		A277D127196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/MacTests/Info.plist"; sourceTree = SOURCE_ROOT; };
+		A277D143196C0D0A0016E897 /* RIPEMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RIPEMD.swift; path = Classes/RIPEMD.swift; sourceTree = SOURCE_ROOT; };
+		A277D146196C0DDE0016E897 /* RIPEMDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RIPEMDmac.h; path = "Supporting Files/Mac/RIPEMDmac.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +75,9 @@
 		A277D10C196C0A070016E897 = {
 			isa = PBXGroup;
 			children = (
-				A277D119196C0A070016E897 /* Supporting Files */,
 				A277D118196C0A070016E897 /* Classes */,
-				A277D125196C0A070016E897 /* RIPENDmacTests */,
+				A277D125196C0A070016E897 /* Tests */,
+				A277D119196C0A070016E897 /* Supporting Files */,
 				A277D117196C0A070016E897 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +94,7 @@
 		A277D118196C0A070016E897 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A277D143196C0D0A0016E897 /* RIPEMD.swift */,
 			);
 			name = Classes;
 			path = RIPENDmac;
@@ -101,28 +103,37 @@
 		A277D119196C0A070016E897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A277D11B196C0A070016E897 /* RIPEMDmac.h */,
-				A277D11A196C0A070016E897 /* Info.plist */,
+				A277D142196C0CFA0016E897 /* MacTests */,
+				A277D141196C0CF50016E897 /* Mac */,
 			);
 			name = "Supporting Files";
 			path = RIPENDmac;
 			sourceTree = "<group>";
 		};
-		A277D125196C0A070016E897 /* RIPENDmacTests */ = {
+		A277D125196C0A070016E897 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A277D128196C0A070016E897 /* RIPEMDmacTests.swift */,
-				A277D126196C0A070016E897 /* Supporting Files */,
+				A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */,
 			);
+			name = Tests;
 			path = RIPENDmacTests;
 			sourceTree = "<group>";
 		};
-		A277D126196C0A070016E897 /* Supporting Files */ = {
+		A277D141196C0CF50016E897 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				A277D146196C0DDE0016E897 /* RIPEMDmac.h */,
+				A277D11A196C0A070016E897 /* Info.plist */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		A277D142196C0CFA0016E897 /* MacTests */ = {
 			isa = PBXGroup;
 			children = (
 				A277D127196C0A070016E897 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = MacTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +143,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277D11C196C0A070016E897 /* RIPEMDmac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277D129196C0A070016E897 /* RIPEMDmacTests.swift in Sources */,
+				A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,30 +368,33 @@
 		A277D12D196C0A070016E897 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = RIPENDmac/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RIPEMDmac;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A277D12E196C0A070016E897 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = RIPENDmac/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RIPEMDmac;
@@ -391,6 +405,7 @@
 		A277D130196C0A070016E897 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -400,21 +415,23 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = RIPENDmacTests/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/MacTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = RIPEMDmacTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A277D131196C0A070016E897 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = RIPENDmacTests/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/MacTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = RIPEMDmacTests;
 			};
@@ -439,6 +456,7 @@
 				A277D12E196C0A070016E897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A277D12F196C0A070016E897 /* Build configuration list for PBXNativeTarget "RIPEMDmacTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +465,7 @@
 				A277D131196C0A070016E897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A277D115196C0A070016E897"
                BuildableName = "RIPEMDmac.framework"
-               BlueprintName = "RIPEMD"
+               BlueprintName = "RIPEMDmac"
                ReferencedContainer = "container:RIPEMD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A277D120196C0A070016E897"
                BuildableName = "RIPEMDmacTests.xctest"
-               BlueprintName = "RIPEMDTests"
+               BlueprintName = "RIPEMDmacTests"
                ReferencedContainer = "container:RIPEMD.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A277D115196C0A070016E897"
             BuildableName = "RIPEMDmac.framework"
-            BlueprintName = "RIPEMD"
+            BlueprintName = "RIPEMDmac"
             ReferencedContainer = "container:RIPEMD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A277D115196C0A070016E897"
             BuildableName = "RIPEMDmac.framework"
-            BlueprintName = "RIPEMD"
+            BlueprintName = "RIPEMDmac"
             ReferencedContainer = "container:RIPEMD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A277D115196C0A070016E897"
             BuildableName = "RIPEMDmac.framework"
-            BlueprintName = "RIPEMD"
+            BlueprintName = "RIPEMDmac"
             ReferencedContainer = "container:RIPEMD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
