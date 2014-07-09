@@ -103,52 +103,23 @@ class RIPENDmacTests: XCTestCase {
     // Some other vectors
     
     func testSingleBlockMessage() {
-        // 64 characters = 512 bits = 1 block without padding.
+        // 55 characters = 1 block without zero padding (see test55charactersNotPadded)
         let message = "Sed ut perspiciatis unde omnis iste natus error sit vol"
         let hash    = "e6f95b697f98c944e6234a6313e11e179c8e867c"
         XCTAssertEqual(RIPEMD.asciiDigest(message), hash, "")
     }
     
-    // RIPEMD blocks
     
-    func test55charactersNotPadded() {
-        /* Multiples of 64 characters minus 9 don't need padding. The 9th last byte is used to write 0x80. The last 8 bytes store the length. A string of 55 characters should only be appended with 0x80 and the two length bytes making it 64 bytes long. */
+    func testQuadBlockMessage() {
+        // 256 - 9 = 247
         
-        let message = "Sed ut perspiciatis unde omnis iste natus error sit vol"
-        
-        if let data: NSData = message.dataUsingEncoding(NSASCIIStringEncoding) {
-            XCTAssertEqual(data.length, 55)
-
-            var paddedData = data.mutableCopy() as NSMutableData
-            
-            let stop: [UInt8] = [UInt8(0x80)] // 2^8
-            paddedData.appendBytes(stop, length: 1)
-            
-            let lengthBytes: [UInt32] = [55 * 8, 0]
-            paddedData.appendBytes(lengthBytes, length: 8)
-            
-            XCTAssertEqual(paddedData.length, 64)
-
-            
-            var byte: UInt8 = 0x00
-            
-            let result = RIPEMD.pad(data)
-            
-            XCTAssertEqual(result.length, 64)
-
-            
-            result.getBytes(&byte, range: NSMakeRange(15, 1))
-            XCTAssertEqual(byte, UInt8(0x61), "16th character is not 'a'")
-            
-            result.getBytes(&byte, range: NSMakeRange(54, 1))
-            XCTAssertEqual(byte, UInt8(0x6C), "55th character is not 'l'")
-            
-            XCTAssertEqual(result, paddedData, "")
-            
-        } else {
-            XCTAssertTrue(false, "Message encoding failed")
-        }
+        let message = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia"
+       
+        let hash    = "5f5b48448f5e0abab49da46b9c8c0b0395eac519"
+        XCTAssertEqual(RIPEMD.asciiDigest(message), hash, "")
     }
+    
+    // RIPEMD blocks
     
     func testGetWordsInSection() {
         let message = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa."
@@ -180,4 +151,44 @@ class RIPENDmacTests: XCTestCase {
         XCTAssertEqual(hashHexString, "e6f95b697f98c944e6234a6313e11e179c8e867c", "")
         
     }
+    
+    func test55charactersNotPadded() {
+        /* Multiples of 64 characters minus 9 don't need padding. The 9th last byte is used to write 0x80. The last 8 bytes store the length. A string of 55 characters should only be appended with 0x80 and the two length bytes making it 64 bytes long. */
+        
+        let message = "Sed ut perspiciatis unde omnis iste natus error sit vol"
+        
+        if let data: NSData = message.dataUsingEncoding(NSASCIIStringEncoding) {
+            XCTAssertEqual(data.length, 55)
+            
+            var paddedData = data.mutableCopy() as NSMutableData
+            
+            let stop: [UInt8] = [UInt8(0x80)] // 2^8
+            paddedData.appendBytes(stop, length: 1)
+            
+            let lengthBytes: [UInt32] = [55 * 8, 0]
+            paddedData.appendBytes(lengthBytes, length: 8)
+            
+            XCTAssertEqual(paddedData.length, 64)
+            
+            
+            var byte: UInt8 = 0x00
+            
+            let result = RIPEMD.pad(data)
+            
+            XCTAssertEqual(result.length, 64)
+            
+            
+            result.getBytes(&byte, range: NSMakeRange(15, 1))
+            XCTAssertEqual(byte, UInt8(0x61), "16th character is not 'a'")
+            
+            result.getBytes(&byte, range: NSMakeRange(54, 1))
+            XCTAssertEqual(byte, UInt8(0x6C), "55th character is not 'l'")
+            
+            XCTAssertEqual(result, paddedData, "")
+            
+        } else {
+            XCTAssertTrue(false, "Message encoding failed")
+        }
+    }
+
 }

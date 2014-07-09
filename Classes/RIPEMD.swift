@@ -11,15 +11,16 @@ struct RIPEMD {
     static func digest (input : NSData, bitlength:Int = 160) -> NSData {
         assert(bitlength == 160, "Only RIPEMD-160 is implemented")
         
-        if input.length == 55 {
+        if (input.length + 9) % 64 == 0 && input.length > 0 {
             let paddedData = pad(input)
             
             var block = RIPEMD.Block()
             
-            let part1 = getWordsInSection(paddedData, 0)
+            for var i=0; i < paddedData.length / 64; i++ {
+                let part = getWordsInSection(paddedData, i)
+                block.compress(part)
+            }
 
-            block.compress(part1)
-            
             return encodeWords(block.hash)
             
         } else {
