@@ -78,7 +78,7 @@ struct RIPEMD {
     }
     
     // Returns a string representation of a hexadecimal number
-    static func hexStringDigest (input : NSData, bitlength:Int = 160) -> String {
+    static func digest (input : NSData, bitlength:Int = 160) -> String {
         return digest(input, bitlength: bitlength).toHexString()
     }
     

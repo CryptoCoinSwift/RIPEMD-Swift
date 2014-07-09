@@ -64,7 +64,8 @@
 		A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD+Block.swift"; path = "Classes/RIPEMD+Block.swift"; sourceTree = SOURCE_ROOT; };
 		A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Block-Tests.swift"; path = "Tests/RIPEMD-Block-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A2DE4900196D2E47004151F9 /* NSData-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData-Tests.swift"; path = "Tests/NSData-Tests.swift"; sourceTree = SOURCE_ROOT; };
-		A2DE4902196D4828004151F9 /* RIPEMD-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RIPEMD-Bridging-Header.h"; path = "RIPEMD/RIPEMD-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A2DE4902196D4828004151F9 /* RIPEMD-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RIPEMD-Bridging-Header.h"; path = "Supporting Files/RIPEMD-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A2DE4904196D7042004151F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 		A277D119196C0A070016E897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2DE4904196D7042004151F9 /* README.md */,
 				A277D142196C0CFA0016E897 /* MacTests */,
 				A277D141196C0CF50016E897 /* Mac */,
 				A2DE4902196D4828004151F9 /* RIPEMD-Bridging-Header.h */,
@@ -408,7 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RIPEMDmac;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RIPEMD/RIPEMD-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/RIPEMD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -428,7 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RIPEMDmac;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RIPEMD/RIPEMD-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/RIPEMD-Bridging-Header.h";
 			};
 			name = Release;
 		};
