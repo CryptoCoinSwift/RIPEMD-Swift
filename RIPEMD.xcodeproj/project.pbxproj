@@ -12,7 +12,7 @@
 		A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */; };
 		A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMDmac.framework */; };
 		A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D143196C0D0A0016E897 /* RIPEMD.swift */; };
-		A2A93B10196C48C1001D5247 /* HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B0F196C48C1001D5247 /* HexString.swift */; };
+		A2A93B10196C48C1001D5247 /* NSData+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B0F196C48C1001D5247 /* NSData+HexString.swift */; };
 		A2A93B12196C49BA001D5247 /* RIPEMD+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */; };
 		A2A93B14196C4B05001D5247 /* RIPEMD-Block-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		A277D127196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/MacTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A277D143196C0D0A0016E897 /* RIPEMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RIPEMD.swift; path = Classes/RIPEMD.swift; sourceTree = SOURCE_ROOT; };
 		A277D146196C0DDE0016E897 /* RIPEMDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RIPEMDmac.h; path = "Supporting Files/Mac/RIPEMDmac.h"; sourceTree = "<group>"; };
-		A2A93B0F196C48C1001D5247 /* HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexString.swift; path = Classes/HexString.swift; sourceTree = SOURCE_ROOT; };
+		A2A93B0F196C48C1001D5247 /* NSData+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData+HexString.swift"; path = "Classes/NSData+HexString.swift"; sourceTree = SOURCE_ROOT; };
 		A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD+Block.swift"; path = "Classes/RIPEMD+Block.swift"; sourceTree = SOURCE_ROOT; };
 		A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Block-Tests.swift"; path = "Tests/RIPEMD-Block-Tests.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -107,7 +107,7 @@
 				A277D143196C0D0A0016E897 /* RIPEMD.swift */,
 				A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */,
 				A227491B196C468C006A4050 /* UInt32+CircularShift.swift */,
-				A2A93B0F196C48C1001D5247 /* HexString.swift */,
+				A2A93B0F196C48C1001D5247 /* NSData+HexString.swift */,
 			);
 			name = Classes;
 			path = RIPENDmac;
@@ -262,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A93B12196C49BA001D5247 /* RIPEMD+Block.swift in Sources */,
-				A2A93B10196C48C1001D5247 /* HexString.swift in Sources */,
+				A2A93B10196C48C1001D5247 /* NSData+HexString.swift in Sources */,
 				A227491C196C468C006A4050 /* UInt32+CircularShift.swift in Sources */,
 				A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */,
 			);

@@ -7,16 +7,9 @@
 
 import Foundation
 
-struct HexString {
-    let string: String
-    
-    init(_ string:String) {
-        // TODO: check for invalid characters
-        self.string = string
-    }
-    
-    init(_ data: NSData) {
-        let sha256description = data.description as String
+extension NSData {
+    func toHexString () -> String {
+        let sha256description = self.description as String
         
         // TODO: more elegant way to convert NSData to a hex string
         
@@ -31,23 +24,23 @@ struct HexString {
             }
         }
         
-        self.string = result
+        return result
     }
     
-    var data: NSData {
-    // Based on: http://stackoverflow.com/a/2505561/313633
-    var data = NSMutableData()
-        
-        var string = ""
+    class func fromHexString (string: String) -> NSData {
+        // Based on: http://stackoverflow.com/a/2505561/313633
+        var data = NSMutableData()
+            
+        var temp = ""
         
         for char in string {
-            string+=char
-            if(countElements(string) == 2) {
-                let scanner = NSScanner(string: string)
+            temp+=char
+            if(countElements(temp) == 2) {
+                let scanner = NSScanner(string: temp)
                 var value: CUnsignedInt = 0
                 scanner.scanHexInt(&value)
                 data.appendBytes(&value, length: 1)
-                string = ""
+                temp = ""
             }
             
         }

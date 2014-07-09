@@ -16,12 +16,12 @@ struct RIPEMD {
     
     // Returns a string representation of a hexadecimal number
     static func hexStringDigest (input : NSData, bitlength:Int = 160) -> String {
-        return HexString(digest(input, bitlength: bitlength)).string
+        return digest(input, bitlength: bitlength).toHexString()
     }
     
     // Takes a string representation of a hexadecimal number
     static func hexStringDigest (input : String, bitlength:Int = 160) -> NSData {
-        let data = HexString(input).data
+        let data = NSData.fromHexString(input)
         return digest(data, bitlength: bitlength)
     }
     
@@ -29,7 +29,7 @@ struct RIPEMD {
     // string represenation of the resulting 160 bit hash.
     static func hexStringDigest (input : String, bitlength:Int = 160) -> String {
         let digest: NSData = hexStringDigest(input, bitlength: bitlength)
-        return HexString(digest).string
+        return digest.toHexString()
     }
     
     // Takes an ASCII string
