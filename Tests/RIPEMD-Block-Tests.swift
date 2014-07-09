@@ -97,10 +97,15 @@ class RIPEMD_Block_Tests: XCTestCase {
         
         let a: UInt32 = UInt32(bigEndian: 0x61_00_00_00)
         
+
+        
         // Message gets padded with 0x80 and zeros. The last 8 bytes
         // store, in little endian, the length of the message in bits.
         
-        let message: [UInt32] = [UInt32(bigEndian: 0x61_80_00_00),0,0,0,0,0,0,0,0,0,0,0,0,0,UInt32(bigEndian: 0x08_00_00_00),UInt32(bigEndian: 0x00_00_00_00)]
+        let message: [UInt32] = [UInt32(bigEndian: 0x61_80_00_00),0,0,0,0,0,0,0,0,0,0,0,0,0,8,0]
+        
+        let aString = NSString(format: "0x%2x", UInt32(bigEndian: 0x61_80_00_00))
+        println(aString)
         
         var digester = RIPEMD.Block()
         digester.compress(message)
@@ -120,12 +125,7 @@ class RIPEMD_Block_Tests: XCTestCase {
         let check4: Bool = h4 == UInt32(bigEndian: 0x5a467ffe)
         
         XCTAssertTrue(check0 && check1 && check2 && check3 && check4, "")
-        
-        println("0: \( check0 ) " + NSString(format:"%2x", h0))
-        println("1: \( check1 ) " + NSString(format:"%2x", h1))
-        println("2: \( check2 ) " + NSString(format:"%2x", h2))
-        println("3: \( check3 ) " + NSString(format:"%2x", h3))
-        println("4: \( check4 ) " + NSString(format:"%2x", h4))
+
     }
 
 }
