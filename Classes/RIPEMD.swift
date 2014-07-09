@@ -11,23 +11,16 @@ struct RIPEMD {
     static func digest (input : NSData, bitlength:Int = 160) -> NSData {
         assert(bitlength == 160, "Only RIPEMD-160 is implemented")
         
-        if (input.length + 9) % 64 == 0 && input.length > 0 {
-            let paddedData = pad(input)
-            
-            var block = RIPEMD.Block()
-            
-            for var i=0; i < paddedData.length / 64; i++ {
-                let part = getWordsInSection(paddedData, i)
-                block.compress(part)
-            }
-
-            return encodeWords(block.hash)
-            
-        } else {
-            return NSData()
-
-        }
+        let paddedData = pad(input)
         
+        var block = RIPEMD.Block()
+        
+        for var i=0; i < paddedData.length / 64; i++ {
+            let part = getWordsInSection(paddedData, i)
+            block.compress(part)
+        }
+
+        return encodeWords(block.hash)
     }
     
     // Pads the input to a multiple 64 bytes. First it adds 0x80 followed by zeros.
@@ -36,9 +29,26 @@ struct RIPEMD {
     static func pad(data: NSData) -> NSData {
         var paddedData = data.mutableCopy() as NSMutableData
         
+        // Put 0x80 after the last character:
         let stop: [UInt8] = [UInt8(0x80)] // 2^8
         paddedData.appendBytes(stop, length: 1)
         
+        // Pad with zeros until there are 64 * k - 8 bytes.
+        var numberOfZerosToPad: Int;
+        if paddedData.length % 64 == 56 {
+            // No padding needed
+            numberOfZerosToPad = 0
+        } else if paddedData.length % 64 < 56 {
+            numberOfZerosToPad = 56 - (paddedData.length % 64)
+        } else {
+            // Add an extra round
+            numberOfZerosToPad = 56 + (64 - paddedData.length % 64)
+        }
+        
+        let zeroBytes = [UInt8](count: numberOfZerosToPad, repeatedValue: 0)
+        paddedData.appendBytes(zeroBytes, length: numberOfZerosToPad)
+        
+        // Append length of message:
         let length: UInt32 = UInt32(data.length) * 8
         let lengthBytes: [UInt32] = [length, UInt32(0x00_00_00_00)]
         paddedData.appendBytes(lengthBytes, length: 8)

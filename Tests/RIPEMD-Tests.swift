@@ -83,12 +83,14 @@ class RIPENDmacTests: XCTestCase {
         XCTAssertEqual(RIPEMD.asciiDigest(message), hash, "")
     }
     
-    func testMilionTimesA() {
-        let a = Character("a")
-        let message = String(count: 1_000_000, repeatedValue: a)
-        
-        XCTAssertEqual(RIPEMD.asciiDigest(message), hash, "")
-    }
+    // Test passes but takes 30 seconds in Release configuration
+//    func testMilionTimesA() {
+//        let a = Character("a")
+//        let message = String(count: 1_000_000, repeatedValue: a)
+//        let hash = "52783243c1697bdbe16d37f97f68f08325dc1528"
+//        
+//        XCTAssertEqual(RIPEMD.asciiDigest(message), hash, "")
+//    }
     
     // Hex string example from https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses
     
