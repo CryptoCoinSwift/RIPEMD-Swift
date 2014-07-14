@@ -127,5 +127,16 @@ class RIPEMD_Block_Tests: XCTestCase {
         XCTAssertTrue(check0 && check1 && check2 && check3 && check4, "")
 
     }
+    
+    func testRosettaCode() {
+        //
+        var block = RIPEMD.Block()
+        let message:[UInt32] = [ 0x65_73_6f_52, 0x20_61_74_74, 0x65_64_6f_43, 0x00_00_00_80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 96, 0 ]
+        block.compress(message)
+        
+        let digest = NSString(format: "%2x%2x%2x%2x%2x", UInt32(bigEndian: block.hash[0]), UInt32(bigEndian: block.hash[1]),UInt32(bigEndian: block.hash[2]), UInt32(bigEndian: block.hash[3]), UInt32(bigEndian: block.hash[4]))
+        
+        XCTAssertEqual(digest, "b3be159860842cebaa7174c8fff0aa9e50a5199f", "")
+    }
 
 }
