@@ -102,7 +102,7 @@ struct RIPEMD {
         if let data: NSData = input.dataUsingEncoding(NSASCIIStringEncoding) {
             return digest(data, bitlength: bitlength)
         } else {
-            assert("Invalid input")
+            assert(false, "Invalid input")
             return NSData()
         }
     }

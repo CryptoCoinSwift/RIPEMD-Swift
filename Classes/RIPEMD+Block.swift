@@ -77,7 +77,7 @@ extension RIPEMD {
         func f (j: Int) -> ((UInt32, UInt32, UInt32) -> UInt32) {
             switch j {
             case let index where j < 0:
-                assert("Invalid j")
+                assert(false, "Invalid j")
                 return {(_, _, _) in 0 }
             case let index where j <= 15:
                 return {(x, y, z) in  x ^ y ^ z }
@@ -90,7 +90,7 @@ extension RIPEMD {
             case let index where j <= 79:
                 return {(x, y, z) in  x ^ (y | ~z) }
             default:
-                assert("Invalid j")
+                assert(false, "Invalid j")
                 return {(_, _, _) in 0 }
             }
         }
@@ -101,7 +101,7 @@ extension RIPEMD {
             subscript(j: Int) -> UInt32 {
                 switch index {
                 case let index where j < 0:
-                    assert("Invalid j")
+                    assert(false, "Invalid j")
                     return 0
                 case let index where j <= 15:
                     return self == .Left ? 0x00000000 : 0x50A28BE6
@@ -114,7 +114,7 @@ extension RIPEMD {
                 case let index where j <= 79:
                     return self == .Left ? 0xA953FD4E : 0x00000000
                 default:
-                    assert("Invalid j")
+                    assert(false, "Invalid j")
                     return 0
                     }
             }
@@ -126,7 +126,7 @@ extension RIPEMD {
             subscript (j: Int) -> Int {
                 switch j {
                 case let index where j < 0:
-                    assert("Invalid j")
+                    assert(false, "Invalid j")
                     return 0
                 case let index where j <= 15:
                     if self == .Left {
@@ -160,7 +160,7 @@ extension RIPEMD {
                     }
 
                 default:
-                    assert("Invalid j")
+                    assert(false, "Invalid j")
                     return 0
                 }
             }
@@ -174,7 +174,7 @@ extension RIPEMD {
             subscript(j: Int) -> Int {
                 switch index {
                 case let index where j < 0:
-                    assert("Invalid j")
+                    assert(false, "Invalid j")
                     return 0
                 case let index where j <= 15:
                     return (self == .Left ? [11,14,15,12,5,8,7,9,11,13,14,15,6,7,9,8] : [8,9,9,11,13,15,15,5,7,7,8,11,14,14,12,6])[j]
@@ -187,7 +187,7 @@ extension RIPEMD {
                 case let index where j <= 79:
                     return (self == .Left ? [9,15,5,11,6,8,13,12,5,12,13,14,11,8,5,6] : [8,5,12,9,12,5,14,6,8,13,6,5,15,13,11,11])[j - 64]
                 default:
-                    assert("Invalid j")
+                    assert(false, "Invalid j")
                     return 0
                     }
             }
