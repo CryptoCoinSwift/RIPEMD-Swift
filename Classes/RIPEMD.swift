@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct RIPEMD {
-    static func digest (input : NSData, bitlength:Int = 160) -> NSData {
+public struct RIPEMD {
+    public static func digest (input : NSData, bitlength:Int = 160) -> NSData {
         assert(bitlength == 160, "Only RIPEMD-160 is implemented")
         
         let paddedData = pad(input)
@@ -26,7 +26,9 @@ struct RIPEMD {
     // Pads the input to a multiple 64 bytes. First it adds 0x80 followed by zeros.
     // It then needs 8 bytes at the end where it writes the length (in bits, little endian).
     // If this doesn't fit it will add another block of 64 bytes.
-    static func pad(data: NSData) -> NSData {
+    
+    // FIXME: Make private once tests support it
+    public static func pad(data: NSData) -> NSData {
         var paddedData = data.mutableCopy() as NSMutableData
         
         // Put 0x80 after the last character:
@@ -59,8 +61,8 @@ struct RIPEMD {
     // Takes an NSData object of length k * 64 bytes and returns an array of UInt32 
     // representing 1 word (4 bytes) each. Each word is in little endian,
     // so "abcdefgh" is now "dcbahgfe".
-    
-    static func getWordsInSection(data: NSData, _ section: Int) -> [UInt32] {
+    // FIXME: Make private once tests support it
+    public static func getWordsInSection(data: NSData, _ section: Int) -> [UInt32] {
         let offset = section * 64
         
         assert(data.length >= Int(offset + 64), "Data too short")
@@ -72,31 +74,32 @@ struct RIPEMD {
         return words
     }
     
-    static func encodeWords(input: [UInt32]) -> NSData {
+    // FIXME: Make private once tests support it
+    public static func encodeWords(input: [UInt32]) -> NSData {
         let data = NSMutableData(bytes: input, length: 20)
         return data
     }
     
     // Returns a string representation of a hexadecimal number
-    static func digest (input : NSData, bitlength:Int = 160) -> String {
+    public static func digest (input : NSData, bitlength:Int = 160) -> String {
         return digest(input, bitlength: bitlength).toHexString()
     }
     
     // Takes a string representation of a hexadecimal number
-    static func hexStringDigest (input : String, bitlength:Int = 160) -> NSData {
+    public static func hexStringDigest (input : String, bitlength:Int = 160) -> NSData {
         let data = NSData.fromHexString(input)
         return digest(data, bitlength: bitlength)
     }
     
     // Takes a string representation of a hexadecimal number and returns a
     // string represenation of the resulting 160 bit hash.
-    static func hexStringDigest (input : String, bitlength:Int = 160) -> String {
+    public static func hexStringDigest (input : String, bitlength:Int = 160) -> String {
         let digest: NSData = hexStringDigest(input, bitlength: bitlength)
         return digest.toHexString()
     }
     
     // Takes an ASCII string
-    static func asciiDigest (input : String, bitlength:Int = 160) -> NSData {
+    public static func asciiDigest (input : String, bitlength:Int = 160) -> NSData {
         // Order of bytes is preserved; if the last character is dot, the last 
         // byte is a dot.
         if let data: NSData = input.dataUsingEncoding(NSASCIIStringEncoding) {
@@ -109,7 +112,7 @@ struct RIPEMD {
     
     // Takes an ASCII string and returns a hex string represenation of the
     // resulting 160 bit hash.
-    static func asciiDigest (input : String, bitlength:Int = 160) -> String {
+    public static func asciiDigest (input : String, bitlength:Int = 160) -> String {
         return asciiDigest(input, bitlength: bitlength).toHexString()
     }
     

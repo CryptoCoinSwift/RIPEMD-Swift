@@ -9,6 +9,7 @@
 // Precendence should be the same as <<
 operator infix ~<< { precedence 160 associativity none }
 
-func ~<< (lhs: UInt32, rhs: Int) -> UInt32 {
+//FIXME: Make framework-only once tests support it
+public func ~<< (lhs: UInt32, rhs: Int) -> UInt32 {
     return (lhs << UInt32(rhs)) | (lhs >> UInt32(32 - rhs));
 }

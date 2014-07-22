@@ -8,8 +8,9 @@
 import Foundation
 
 extension RIPEMD {
-    struct Block {
-        init() {}
+    // FIXME: Make struct and all functions framework-only as soon as tests support that
+    public struct Block {
+        public init() {}
         
         var message: [UInt32] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         
@@ -20,12 +21,12 @@ extension RIPEMD {
         var h₃: UInt32 = 0x10325476
         var h₄: UInt32 = 0xC3D2E1F0
         
-        var hash: [UInt32] {
+        public var hash: [UInt32] {
             return [h₀, h₁, h₂, h₃, h₄]
         }
         
-        
-        mutating func compress (message: [UInt32]) -> () {
+        // FIXME: Make private as soon as tests support that
+        public mutating func compress (message: [UInt32]) -> () {
             assert(countElements(message) == 16, "Wrong message size")
             
             var Aᴸ = h₀
@@ -74,7 +75,7 @@ extension RIPEMD {
             h₀ = T
         }
         
-        func f (j: Int) -> ((UInt32, UInt32, UInt32) -> UInt32) {
+        public func f (j: Int) -> ((UInt32, UInt32, UInt32) -> UInt32) {
             switch j {
             case let index where j < 0:
                 assert(false, "Invalid j")
@@ -95,10 +96,10 @@ extension RIPEMD {
             }
         }
         
-        enum K {
+        public enum K {
             case Left, Right
             
-            subscript(j: Int) -> UInt32 {
+            public subscript(j: Int) -> UInt32 {
                 switch index {
                 case let index where j < 0:
                     assert(false, "Invalid j")
@@ -120,10 +121,10 @@ extension RIPEMD {
             }
         }
         
-        enum r {
+        public enum r {
             case Left, Right
             
-            subscript (j: Int) -> Int {
+            public subscript (j: Int) -> Int {
                 switch j {
                 case let index where j < 0:
                     assert(false, "Invalid j")
@@ -168,10 +169,10 @@ extension RIPEMD {
             
         }
         
-        enum s {
+        public enum s {
             case Left, Right
             
-            subscript(j: Int) -> Int {
+            public subscript(j: Int) -> Int {
                 switch index {
                 case let index where j < 0:
                     assert(false, "Invalid j")

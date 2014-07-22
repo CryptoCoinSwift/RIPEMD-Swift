@@ -8,7 +8,7 @@
 import Foundation
 
 extension NSData {
-    func toHexString () -> String {
+    public func toHexString () -> String {
         let sha256description = self.description as String
         
         // TODO: more elegant way to convert NSData to a hex string
@@ -27,7 +27,7 @@ extension NSData {
         return result
     }
     
-    class func fromHexString (string: String) -> NSData {
+    public class func fromHexString (string: String) -> NSData {
         // Based on: http://stackoverflow.com/a/2505561/313633
         var data = NSMutableData()
             
