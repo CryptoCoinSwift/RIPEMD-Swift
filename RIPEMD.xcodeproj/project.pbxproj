@@ -10,13 +10,22 @@
 		A227491C196C468C006A4050 /* UInt32+CircularShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491B196C468C006A4050 /* UInt32+CircularShift.swift */; };
 		A227491E196C46AF006A4050 /* UInt32+CircularShift-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */; };
 		A273E1E9196C0F6D009194EE /* RIPEMD-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */; };
-		A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMDmac.framework */; };
+		A277D122196C0A070016E897 /* RIPEMD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A277D116196C0A070016E897 /* RIPEMD.framework */; };
 		A277D144196C0D0A0016E897 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D143196C0D0A0016E897 /* RIPEMD.swift */; };
 		A2A93B10196C48C1001D5247 /* NSData+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B0F196C48C1001D5247 /* NSData+HexString.swift */; };
 		A2A93B12196C49BA001D5247 /* RIPEMD+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */; };
 		A2A93B14196C4B05001D5247 /* RIPEMD-Block-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */; };
+		A2D39BB6198D803500E2D317 /* RIPEMD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D39BAB198D803500E2D317 /* RIPEMD.framework */; };
+		A2D39BBD198D803500E2D317 /* RIPEMDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D39BBC198D803500E2D317 /* RIPEMDTests.swift */; };
+		A2D39BC6198D803D00E2D317 /* RIPEMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277D143196C0D0A0016E897 /* RIPEMD.swift */; };
+		A2D39BC7198D803D00E2D317 /* RIPEMD+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */; };
+		A2D39BC8198D803D00E2D317 /* UInt32+CircularShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491B196C468C006A4050 /* UInt32+CircularShift.swift */; };
+		A2D39BC9198D803D00E2D317 /* NSData+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B0F196C48C1001D5247 /* NSData+HexString.swift */; };
+		A2D39BCA198D804000E2D317 /* RIPEMD-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */; };
+		A2D39BCB198D804000E2D317 /* UInt32+CircularShift-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */; };
+		A2D39BCC198D804000E2D317 /* RIPEMD-Block-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */; };
+		A2D39BCD198D804000E2D317 /* NSData-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE4900196D2E47004151F9 /* NSData-Tests.swift */; };
 		A2DE4901196D2E47004151F9 /* NSData-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE4900196D2E47004151F9 /* NSData-Tests.swift */; };
-		A2DE4903196D4828004151F9 /* RIPEMD-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = A2DE4902196D4828004151F9 /* RIPEMD-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,23 +57,54 @@
 			remoteGlobalIDString = A277D115196C0A070016E897;
 			remoteInfo = RIPEMDmac;
 		};
+		A2D39BB7198D803500E2D317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A277D10D196C0A070016E897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2D39BAA198D803500E2D317;
+			remoteInfo = RIPEMD;
+		};
+		A2D39BD0198D81A500E2D317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A277D10D196C0A070016E897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A277D115196C0A070016E897;
+			remoteInfo = RIPEMDmac;
+		};
+		A2D39BD2198D81A500E2D317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A277D10D196C0A070016E897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A277D115196C0A070016E897;
+			remoteInfo = RIPEMDmac;
+		};
+		A2D39BD5198D825400E2D317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A277D10D196C0A070016E897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2D39BAA198D803500E2D317;
+			remoteInfo = RIPEMD;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A227491B196C468C006A4050 /* UInt32+CircularShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UInt32+CircularShift.swift"; path = "Classes/UInt32+CircularShift.swift"; sourceTree = SOURCE_ROOT; };
 		A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UInt32+CircularShift-Tests.swift"; path = "Tests/UInt32+CircularShift-Tests.swift"; sourceTree = SOURCE_ROOT; };
 		A273E1E8196C0F6D009194EE /* RIPEMD-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Tests.swift"; path = "Tests/RIPEMD-Tests.swift"; sourceTree = SOURCE_ROOT; };
-		A277D116196C0A070016E897 /* RIPEMDmac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMDmac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A277D116196C0A070016E897 /* RIPEMD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D11A196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Mac/Info.plist"; sourceTree = "<group>"; };
 		A277D121196C0A070016E897 /* RIPEMDmacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIPEMDmacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D127196C0A070016E897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/MacTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		A277D143196C0D0A0016E897 /* RIPEMD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RIPEMD.swift; path = Classes/RIPEMD.swift; sourceTree = SOURCE_ROOT; };
-		A277D146196C0DDE0016E897 /* RIPEMDmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RIPEMDmac.h; path = "Supporting Files/Mac/RIPEMDmac.h"; sourceTree = "<group>"; };
 		A2A93B0F196C48C1001D5247 /* NSData+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData+HexString.swift"; path = "Classes/NSData+HexString.swift"; sourceTree = SOURCE_ROOT; };
 		A2A93B11196C49BA001D5247 /* RIPEMD+Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD+Block.swift"; path = "Classes/RIPEMD+Block.swift"; sourceTree = SOURCE_ROOT; };
 		A2A93B13196C4B05001D5247 /* RIPEMD-Block-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RIPEMD-Block-Tests.swift"; path = "Tests/RIPEMD-Block-Tests.swift"; sourceTree = SOURCE_ROOT; };
+		A2D39BAB198D803500E2D317 /* RIPEMD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D39BAE198D803500E2D317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/iOs/Info.plist"; sourceTree = "<group>"; };
+		A2D39BB5198D803500E2D317 /* RIPEMDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIPEMDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D39BBB198D803500E2D317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2D39BBC198D803500E2D317 /* RIPEMDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMDTests.swift; sourceTree = "<group>"; };
 		A2DE4900196D2E47004151F9 /* NSData-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData-Tests.swift"; path = "Tests/NSData-Tests.swift"; sourceTree = SOURCE_ROOT; };
-		A2DE4902196D4828004151F9 /* RIPEMD-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RIPEMD-Bridging-Header.h"; path = "Supporting Files/RIPEMD-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		A2DE4904196D7042004151F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -80,7 +120,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A277D122196C0A070016E897 /* RIPEMDmac.framework in Frameworks */,
+				A277D122196C0A070016E897 /* RIPEMD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D39BA7198D803500E2D317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D39BB2198D803500E2D317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2D39BB6198D803500E2D317 /* RIPEMD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +148,7 @@
 				A277D118196C0A070016E897 /* Classes */,
 				A277D125196C0A070016E897 /* Tests */,
 				A277D119196C0A070016E897 /* Supporting Files */,
+				A2D39BB9198D803500E2D317 /* RIPEMDTests */,
 				A277D117196C0A070016E897 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,8 +156,10 @@
 		A277D117196C0A070016E897 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A277D116196C0A070016E897 /* RIPEMDmac.framework */,
+				A277D116196C0A070016E897 /* RIPEMD.framework */,
 				A277D121196C0A070016E897 /* RIPEMDmacTests.xctest */,
+				A2D39BAB198D803500E2D317 /* RIPEMD.framework */,
+				A2D39BB5198D803500E2D317 /* RIPEMDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,10 +179,10 @@
 		A277D119196C0A070016E897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2D39BCF198D813F00E2D317 /* iOs */,
 				A2DE4904196D7042004151F9 /* README.md */,
 				A277D142196C0CFA0016E897 /* MacTests */,
 				A277D141196C0CF50016E897 /* Mac */,
-				A2DE4902196D4828004151F9 /* RIPEMD-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			path = RIPENDmac;
@@ -145,7 +203,6 @@
 		A277D141196C0CF50016E897 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				A277D146196C0DDE0016E897 /* RIPEMDmac.h */,
 				A277D11A196C0A070016E897 /* Info.plist */,
 			);
 			name = Mac;
@@ -159,6 +216,31 @@
 			name = MacTests;
 			sourceTree = "<group>";
 		};
+		A2D39BB9198D803500E2D317 /* RIPEMDTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2D39BBC198D803500E2D317 /* RIPEMDTests.swift */,
+				A2D39BBA198D803500E2D317 /* Supporting Files */,
+			);
+			path = RIPEMDTests;
+			sourceTree = "<group>";
+		};
+		A2D39BBA198D803500E2D317 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2D39BBB198D803500E2D317 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2D39BCF198D813F00E2D317 /* iOs */ = {
+			isa = PBXGroup;
+			children = (
+				A2D39BAE198D803500E2D317 /* Info.plist */,
+			);
+			name = iOs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -166,7 +248,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DE4903196D4828004151F9 /* RIPEMD-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D39BA8198D803500E2D317 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +276,7 @@
 			);
 			name = RIPEMDmac;
 			productName = RIPENDmac;
-			productReference = A277D116196C0A070016E897 /* RIPEMDmac.framework */;
+			productReference = A277D116196C0A070016E897 /* RIPEMD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A277D120196C0A070016E897 /* RIPEMDmacTests */ = {
@@ -206,10 +294,49 @@
 				A277D133196C0A1E0016E897 /* PBXTargetDependency */,
 				A277D135196C0A1E0016E897 /* PBXTargetDependency */,
 				A277D137196C0A9F0016E897 /* PBXTargetDependency */,
+				A2D39BD1198D81A500E2D317 /* PBXTargetDependency */,
+				A2D39BD3198D81A500E2D317 /* PBXTargetDependency */,
 			);
 			name = RIPEMDmacTests;
 			productName = RIPENDmacTests;
 			productReference = A277D121196C0A070016E897 /* RIPEMDmacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2D39BAA198D803500E2D317 /* RIPEMD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2D39BC4198D803500E2D317 /* Build configuration list for PBXNativeTarget "RIPEMD" */;
+			buildPhases = (
+				A2D39BA6198D803500E2D317 /* Sources */,
+				A2D39BA7198D803500E2D317 /* Frameworks */,
+				A2D39BA8198D803500E2D317 /* Headers */,
+				A2D39BA9198D803500E2D317 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RIPEMD;
+			productName = RIPEMD;
+			productReference = A2D39BAB198D803500E2D317 /* RIPEMD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2D39BB4198D803500E2D317 /* RIPEMDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2D39BC5198D803500E2D317 /* Build configuration list for PBXNativeTarget "RIPEMDTests" */;
+			buildPhases = (
+				A2D39BB1198D803500E2D317 /* Sources */,
+				A2D39BB2198D803500E2D317 /* Frameworks */,
+				A2D39BB3198D803500E2D317 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2D39BB8198D803500E2D317 /* PBXTargetDependency */,
+				A2D39BD6198D825400E2D317 /* PBXTargetDependency */,
+			);
+			name = RIPEMDTests;
+			productName = RIPEMDTests;
+			productReference = A2D39BB5198D803500E2D317 /* RIPEMDTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -228,6 +355,13 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = A277D115196C0A070016E897;
 					};
+					A2D39BAA198D803500E2D317 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A2D39BB4198D803500E2D317 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A2D39BAA198D803500E2D317;
+					};
 				};
 			};
 			buildConfigurationList = A277D110196C0A070016E897 /* Build configuration list for PBXProject "RIPEMD" */;
@@ -244,6 +378,8 @@
 			targets = (
 				A277D115196C0A070016E897 /* RIPEMDmac */,
 				A277D120196C0A070016E897 /* RIPEMDmacTests */,
+				A2D39BAA198D803500E2D317 /* RIPEMD */,
+				A2D39BB4198D803500E2D317 /* RIPEMDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +393,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A277D11F196C0A070016E897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D39BA9198D803500E2D317 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D39BB3198D803500E2D317 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,6 +438,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2D39BA6198D803500E2D317 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2D39BC7198D803D00E2D317 /* RIPEMD+Block.swift in Sources */,
+				A2D39BC8198D803D00E2D317 /* UInt32+CircularShift.swift in Sources */,
+				A2D39BC6198D803D00E2D317 /* RIPEMD.swift in Sources */,
+				A2D39BC9198D803D00E2D317 /* NSData+HexString.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D39BB1198D803500E2D317 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2D39BCC198D804000E2D317 /* RIPEMD-Block-Tests.swift in Sources */,
+				A2D39BCD198D804000E2D317 /* NSData-Tests.swift in Sources */,
+				A2D39BCB198D804000E2D317 /* UInt32+CircularShift-Tests.swift in Sources */,
+				A2D39BCA198D804000E2D317 /* RIPEMD-Tests.swift in Sources */,
+				A2D39BBD198D803500E2D317 /* RIPEMDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +483,26 @@
 			isa = PBXTargetDependency;
 			target = A277D115196C0A070016E897 /* RIPEMDmac */;
 			targetProxy = A277D136196C0A9F0016E897 /* PBXContainerItemProxy */;
+		};
+		A2D39BB8198D803500E2D317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2D39BAA198D803500E2D317 /* RIPEMD */;
+			targetProxy = A2D39BB7198D803500E2D317 /* PBXContainerItemProxy */;
+		};
+		A2D39BD1198D81A500E2D317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A277D115196C0A070016E897 /* RIPEMDmac */;
+			targetProxy = A2D39BD0198D81A500E2D317 /* PBXContainerItemProxy */;
+		};
+		A2D39BD3198D81A500E2D317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A277D115196C0A070016E897 /* RIPEMDmac */;
+			targetProxy = A2D39BD2198D81A500E2D317 /* PBXContainerItemProxy */;
+		};
+		A2D39BD6198D825400E2D317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2D39BAA198D803500E2D317 /* RIPEMD */;
+			targetProxy = A2D39BD5198D825400E2D317 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -364,7 +557,7 @@
 				INFOPLIST_FILE = "Supporting Files/Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RIPEMDmac;
+				PRODUCT_NAME = RIPEMD;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/RIPEMD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Ofast";
@@ -481,7 +674,7 @@
 				INFOPLIST_FILE = "Supporting Files/Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RIPEMDmac;
+				PRODUCT_NAME = RIPEMD;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/RIPEMD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -501,7 +694,7 @@
 				INFOPLIST_FILE = "Supporting Files/Mac/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = RIPEMDmac;
+				PRODUCT_NAME = RIPEMD;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/RIPEMD-Bridging-Header.h";
 			};
@@ -543,6 +736,120 @@
 			};
 			name = Release;
 		};
+		A2D39BBE198D803500E2D317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RIPEMD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2D39BBF198D803500E2D317 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RIPEMD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2D39BC0198D803500E2D317 /* Fast */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RIPEMD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Fast;
+		};
+		A2D39BC1198D803500E2D317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RIPEMDTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A2D39BC2198D803500E2D317 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RIPEMDTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2D39BC3198D803500E2D317 /* Fast */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RIPEMDTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Fast;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +879,26 @@
 				A277D130196C0A070016E897 /* Debug */,
 				A277D131196C0A070016E897 /* Release */,
 				A20351A6196D9B18008389D7 /* Fast */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2D39BC4198D803500E2D317 /* Build configuration list for PBXNativeTarget "RIPEMD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D39BBE198D803500E2D317 /* Debug */,
+				A2D39BBF198D803500E2D317 /* Release */,
+				A2D39BC0198D803500E2D317 /* Fast */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2D39BC5198D803500E2D317 /* Build configuration list for PBXNativeTarget "RIPEMDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D39BC1198D803500E2D317 /* Debug */,
+				A2D39BC2198D803500E2D317 /* Release */,
+				A2D39BC3198D803500E2D317 /* Fast */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

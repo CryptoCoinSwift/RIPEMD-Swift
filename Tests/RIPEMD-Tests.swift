@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import RIPEMDmac
+import RIPEMD
 
 class RIPENDmacTests: XCTestCase {
     

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import RIPEMDmac
+import RIPEMD
 
 class RIPEMD_Bitwise_Tests: XCTestCase {
 

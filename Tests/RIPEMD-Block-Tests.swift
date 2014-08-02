@@ -6,9 +6,12 @@
 //  Copyright (c) 2014 Crypto Coin Swift. All rights reserved.
 //
 
+#if os(OSX)
 import Cocoa
+#endif
+
 import XCTest
-import RIPEMDmac
+import RIPEMD
 
 class RIPEMD_Block_Tests: XCTestCase {
 
