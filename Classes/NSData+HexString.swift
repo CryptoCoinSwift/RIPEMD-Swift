@@ -14,7 +14,7 @@ extension NSData {
         // TODO: more elegant way to convert NSData to a hex string
         
         var result: String = ""
-        
+
         for char in sha256description {
             switch char {
             case "0", "1", "2", "3", "4", "5", "6", "7","8","9", "a", "b", "c", "d", "e", "f":
@@ -26,7 +26,7 @@ extension NSData {
         
         return result
     }
-    
+
     public class func fromHexString (string: String) -> NSData {
         // Based on: http://stackoverflow.com/a/2505561/313633
         var data = NSMutableData()

@@ -110,8 +110,8 @@ public struct RIPEMD {
         }
     }
     
-    // Takes an ASCII string and returns a hex string represenation of the
-    // resulting 160 bit hash.
+//     Takes an ASCII string and returns a hex string represenation of the
+//     resulting 160 bit hash.
     public static func asciiDigest (input : String, bitlength:Int = 160) -> String {
         return asciiDigest(input, bitlength: bitlength).toHexString()
     }

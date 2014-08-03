@@ -5,8 +5,6 @@
 //  Created by Sjors Provoost on 08-07-14.
 //
 
-import Foundation
-
 extension RIPEMD {
     // FIXME: Make struct and all functions framework-only as soon as tests support that
     public struct Block {
@@ -100,7 +98,7 @@ extension RIPEMD {
             case Left, Right
             
             public subscript(j: Int) -> UInt32 {
-                switch index {
+                switch j {
                 case let index where j < 0:
                     assert(false, "Invalid j")
                     return 0
@@ -173,7 +171,7 @@ extension RIPEMD {
             case Left, Right
             
             public subscript(j: Int) -> Int {
-                switch index {
+                switch j {
                 case let index where j < 0:
                     assert(false, "Invalid j")
                     return 0
