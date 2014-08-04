@@ -7,7 +7,7 @@
 
 // Circular left shift: http://en.wikipedia.org/wiki/Circular_shift
 // Precendence should be the same as <<
-operator infix ~<< { precedence 160 associativity none }
+infix operator  ~<< { precedence 160 associativity none }
 
 //FIXME: Make framework-only once tests support it
 public func ~<< (lhs: UInt32, rhs: Int) -> UInt32 {
