@@ -4,6 +4,8 @@ Native Swift implementation of the [RIPEMD](http://homes.esat.kuleuven.be/~bosse
 
 Usage
 -----
+Checkout the [playground](RIPEMD-160.playground/section-1.swift).
+
 To digest an ASCII string:
 
 ```swift

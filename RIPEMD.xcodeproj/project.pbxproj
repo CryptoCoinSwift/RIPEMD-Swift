@@ -120,6 +120,7 @@
 		A205FF39198E49AA004C0C02 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A227491B196C468C006A4050 /* UInt32+CircularShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UInt32+CircularShift.swift"; path = "Classes/UInt32+CircularShift.swift"; sourceTree = SOURCE_ROOT; };
 		A227491D196C46AF006A4050 /* UInt32+CircularShift-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UInt32+CircularShift-Tests.swift"; path = "Tests/UInt32+CircularShift-Tests.swift"; sourceTree = SOURCE_ROOT; };
+		A23208D11996434600BF5E38 /* RIPEMD-160.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "RIPEMD-160.playground"; sourceTree = "<group>"; };
 		A25C7EA9198E3E91001EFE74 /* RIPEMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIPEMD.h; path = RIPEMD/RIPEMD.h; sourceTree = SOURCE_ROOT; };
 		A2717A50198E42DA00E92CBB /* RIPEMDi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIPEMDi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2717A53198E42DA00E92CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/iOs/Info.plist"; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		A277D10C196C0A070016E897 = {
 			isa = PBXGroup;
 			children = (
+				A23208D11996434600BF5E38 /* RIPEMD-160.playground */,
 				A277D118196C0A070016E897 /* Classes */,
 				A277D125196C0A070016E897 /* Tests */,
 				A277D119196C0A070016E897 /* Supporting Files */,
