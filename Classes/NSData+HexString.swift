@@ -18,9 +18,9 @@ extension NSData {
         for char in sha256description {
             switch char {
             case "0", "1", "2", "3", "4", "5", "6", "7","8","9", "a", "b", "c", "d", "e", "f":
-                result += char
+                result.append(char)
             default:
-                result += ""
+                result += String("")
             }
         }
         
@@ -34,7 +34,7 @@ extension NSData {
         var temp = ""
         
         for char in string {
-            temp+=char
+            temp+=String(char)
             if(countElements(temp) == 2) {
                 let scanner = NSScanner(string: temp)
                 var value: CUnsignedInt = 0
