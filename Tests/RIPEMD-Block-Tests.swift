@@ -56,8 +56,9 @@ class RIPEMD_Block_Tests: XCTestCase {
     
     func testRotationAmount() {
         let s17r = RIPEMD.Block.s.Right[17]
+        let expected: Int = 13
         
-        XCTAssertEqual(s17r, 13, "")
+        XCTAssertEqual(s17r, expected, "")
     }
     
     func testZero() {

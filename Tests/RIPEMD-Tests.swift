@@ -127,7 +127,8 @@ class RIPENDmacTests: XCTestCase {
         let message = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa."
         
         if let data: NSData = message.dataUsingEncoding(NSASCIIStringEncoding) {
-            XCTAssertEqual(data.length, 128)
+            let expected: Int = 128
+            XCTAssertEqual(data.length, expected)
             
             let section  = RIPEMD.getWordsInSection(data, 1)
             
@@ -149,8 +150,9 @@ class RIPENDmacTests: XCTestCase {
         let hash = RIPEMD.encodeWords(hashWords)
         
         let hashHexString = hash.toHexString()
+        let expected: String = "e6f95b697f98c944e6234a6313e11e179c8e867c"
         
-        XCTAssertEqual(hashHexString, "e6f95b697f98c944e6234a6313e11e179c8e867c", "")
+        XCTAssertEqual(hashHexString, expected, "")
         
     }
     
@@ -160,7 +162,8 @@ class RIPENDmacTests: XCTestCase {
         let message = "Sed ut perspiciatis unde omnis iste natus error sit vol"
         
         if let data: NSData = message.dataUsingEncoding(NSASCIIStringEncoding) {
-            XCTAssertEqual(data.length, 55)
+            var expected: Int = 55
+            XCTAssertEqual(data.length, expected)
             
             var paddedData = data.mutableCopy() as NSMutableData
             
@@ -170,14 +173,16 @@ class RIPENDmacTests: XCTestCase {
             let lengthBytes: [UInt32] = [55 * 8, 0]
             paddedData.appendBytes(lengthBytes, length: 8)
             
-            XCTAssertEqual(paddedData.length, 64)
+            expected = 64
+
+            XCTAssertEqual(paddedData.length, expected)
             
             
             var byte: UInt8 = 0x00
             
             let result = RIPEMD.pad(data)
             
-            XCTAssertEqual(result.length, 64)
+            XCTAssertEqual(result.length, expected)
             
             
             result.getBytes(&byte, range: NSMakeRange(15, 1))
