@@ -165,7 +165,7 @@ class RIPENDmacTests: XCTestCase {
             var expected: Int = 55
             XCTAssertEqual(data.length, expected)
             
-            var paddedData = data.mutableCopy() as NSMutableData
+            var paddedData = data.mutableCopy() as! NSMutableData
             
             let stop: [UInt8] = [UInt8(0x80)] // 2^8
             paddedData.appendBytes(stop, length: 1)

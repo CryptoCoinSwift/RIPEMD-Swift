@@ -29,7 +29,7 @@ public struct RIPEMD {
     
     // FIXME: Make private once tests support it
     public static func pad(data: NSData) -> NSData {
-        var paddedData = data.mutableCopy() as NSMutableData
+        var paddedData = data.mutableCopy() as! NSMutableData
         
         // Put 0x80 after the last character:
         let stop: [UInt8] = [UInt8(0x80)] // 2^8

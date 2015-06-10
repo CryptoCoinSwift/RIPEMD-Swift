@@ -35,7 +35,7 @@ extension NSData {
         
         for char in string {
             temp+=String(char)
-            if(countElements(temp) == 2) {
+            if(count(temp) == 2) {
                 let scanner = NSScanner(string: temp)
                 var value: CUnsignedInt = 0
                 scanner.scanHexInt(&value)
