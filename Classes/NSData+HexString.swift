@@ -9,22 +9,14 @@ import Foundation
 
 extension NSData {
     public func toHexString () -> String {
-        let sha256description = self.description as String
+        var hexString = NSMutableString()
         
-        // TODO: more elegant way to convert NSData to a hex string
-        
-        var result: String = ""
-
-        for char in sha256description {
-            switch char {
-            case "0", "1", "2", "3", "4", "5", "6", "7","8","9", "a", "b", "c", "d", "e", "f":
-                result.append(char)
-            default:
-                result += String("")
-            }
+        let bytes = UnsafeBufferPointer<UInt8>(start: UnsafePointer(self.bytes), count:self.length)
+        for byte in bytes {
+            hexString.appendFormat("%02hhx", byte)
         }
         
-        return result
+        return hexString.copy() as! String
     }
 
     public class func fromHexString (string: String) -> NSData {
